@@ -8,5 +8,5 @@ docker run \
   --network host --detach -i \
   --cap-add SYS_ADMIN \
   --mount type=bind,src=$HOME/gem-forge-stack,dst=$HOME/gem-forge-stack \
-  --mount type=bind,src=/data/chris,dst=/data/chris \
+  --mount type=bind,src=/data/$USER,dst=/data/$USER \
   --name $CONTAINER_NAME $IMAGE_NAME
