@@ -8,7 +8,7 @@ ARG GROUP_ID
 ARG USER
 ARG HOME_DIR
 
-# Give sudo priveleges.
+# Give sudo privileges.
 # Password is your username.
 RUN groupadd -g ${GROUP_ID} ${USER} &&\
     useradd -l -u ${USER_ID} -g ${USER} ${USER} &&\
@@ -24,7 +24,7 @@ RUN apt-get update && apt-get dist-upgrade -y
 # INFO: I'd recommend separating the `apt-get install` commands since
 #       if any changes are made, rebuilding the image will only run the commands
 #       that have changed.
-# INFO: Environmnet flag `DEBIAN_FRONTEND=noninteractive` is passed to avoid
+# INFO: Environment flag `DEBIAN_FRONTEND=noninteractive` is passed to avoid
 #       setting up the time zone.
 # INFO: `apt-get install -y` means all packages will install automatically with
 #       yes.
