@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ARG USER_ID
 ARG GROUP_ID
-ARG USER=zhengrong
+ARG USER=gf
 
 RUN groupadd -g ${GROUP_ID} ${USER} &&\
     useradd -l -u ${USER_ID} -g ${USER} ${USER} &&\
